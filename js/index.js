@@ -12,7 +12,7 @@ let deleteEvent = (id) => {
 
 let shortString = (text) => {
 
-    if(!text) return 'Não informado';
+    if(!text) return undefined;
 
     if(text.length > 10) {
         return text.slice(0, 20) + '...';
@@ -31,8 +31,8 @@ let loadTable = () => {
                         <td>${shortString(team.name)}</td>
                         <td>${shortString(team.tribe)}</td>
                         <td>${shortString(team.alliance)}</td>
-                        <td>${shortString(team.manager)}</td>
-                        <td>${shortString(team.contact)}</td>
+                        <td>${shortString(team.manager) ?? 'Harison Carvalho'}</td>
+                        <td>${shortString(team.contact) ?? '11991744151'}</td>
                         <td><button class='btn btn-sm btn-danger btn-block' onClick='deleteEvent(${team.id})' data-js='${team.id}'>Excluir</button>
                 `;
                 

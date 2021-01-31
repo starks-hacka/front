@@ -13,7 +13,7 @@ let deleteEvent = (id) => {
 let formatDate = (date) => {
     if(!date) return '';
     const dateSplit = date.split('-');
-    return `${dateSplit[2]}/${dateSplit[1]}/${dateSplit[0]}`;
+    return `${dateSplit[2].substring(0,2)}/${dateSplit[1]}/${dateSplit[0]}`;
 }
 
 let loadTable = () => {
@@ -93,14 +93,6 @@ let generateGuid = () => {
 let loadTeam = () => {
 
     const url = `http://hackathon-xp.azurewebsites.net/teams/${getQueryUrl('id')}`
-    const team = {
-        id: 1,
-        name: 'Fundos Listados',
-        tribe: 'AMS',
-        alliance: 'Funds',
-        manager: 'Carlos Bueno',
-        contact: '(11) 95063-4443',
-    }
 
     let ajax = new XMLHttpRequest();
     ajax.open('GET', url);
