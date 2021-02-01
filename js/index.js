@@ -33,7 +33,7 @@ let loadTable = () => {
                         <td>${shortString(team.alliance)}</td>
                         <td>${shortString(team.manager) ?? 'Harison Carvalho'}</td>
                         <td>${shortString(team.contact) ?? '11991744151'}</td>
-                        <td><button class='btn btn-sm btn-danger btn-block' onClick='deleteEvent(${team.id})' data-js='${team.id}'>Excluir</button>
+                        <td>
                 `;
                 
                 if(team.typeEscalation == 1) {

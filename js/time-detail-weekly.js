@@ -28,7 +28,6 @@ let loadTable = () => {
                     <td>${escalation.phone}</td>
                     <td>${escalation.email}</td>
                     <td>${formatDate(escalation.date)}</td>
-                    <td><button class='btn btn-sm btn-danger' onClick="deleteEvent('${escalation.id}')" data-js='${escalation.id}'>Excluir</button>
                 </tr>
             `;              
         });
