@@ -13,7 +13,7 @@ const registerTeam = () => {
     console.log(registerModel)
 
     var http = new XMLHttpRequest();
-    var url = 'http://hackathon-xp.azurewebsites.net/teams';
+    var url = 'https://hackathon-xp.azurewebsites.net/teams';
     http.open('POST', url, true);
 
     http.setRequestHeader('Content-type', 'application/json');

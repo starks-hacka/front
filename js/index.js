@@ -64,7 +64,7 @@ let loadTable = () => {
 
 let loadTeams = () => {
 
-    const url = 'http://hackathon-xp.azurewebsites.net/teams';
+    const url = 'https://hackathon-xp.azurewebsites.net/teams';
 
     let ajax = new XMLHttpRequest();
     ajax.open('GET', url);

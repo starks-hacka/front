@@ -61,7 +61,7 @@ const registerEscalation = () => {
     console.log(registerModel)
 
     var http = new XMLHttpRequest();
-    var url = `http://hackathon-xp.azurewebsites.net/teams/${getQueryUrl('id')}/members`;
+    var url = `https://hackathon-xp.azurewebsites.net/teams/${getQueryUrl('id')}/members`;
     http.open('POST', url, true);
 
     http.setRequestHeader('Content-type', 'application/json');
@@ -92,7 +92,7 @@ let generateGuid = () => {
 
 let loadTeam = () => {
 
-    const url = `http://hackathon-xp.azurewebsites.net/teams/${getQueryUrl('id')}`
+    const url = `https://hackathon-xp.azurewebsites.net/teams/${getQueryUrl('id')}`
 
     let ajax = new XMLHttpRequest();
     ajax.open('GET', url);
